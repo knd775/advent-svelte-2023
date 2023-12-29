@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Badge } from '$lib/components/ui/badge';
   import { Button } from '$lib/components/ui/button';
   import * as Card from '$lib/components/ui/card';
   import * as Table from '$lib/components/ui/table';
@@ -14,14 +15,14 @@
   </Card.Header>
   <Card.Content>
     <Table.Root>
-      <Table.Head>
+      <Table.Header>
         <Table.Row>
           <Table.Head>Name</Table.Head>
           <Table.Head>Tally</Table.Head>
           <Table.Head>Status</Table.Head>
           <Table.Head></Table.Head>
         </Table.Row>
-      </Table.Head>
+      </Table.Header>
       <Table.Body>
         {#each data.list as { name, tally }}
           <Table.Row>
@@ -29,16 +30,16 @@
             <Table.Cell>{tally}</Table.Cell>
             <Table.Cell>
               {#if tally > 0}
-                Nice
+                <Badge class="bg-green-400">Nice</Badge>
               {:else}
-                Naughty
+                <Badge class="bg-red-500">Naughty</Badge>
               {/if}
             </Table.Cell>
             <Table.Cell>
-              <Button variant="default" size="icon">
+              <Button variant="default" size="icon" onclick={() => (tally -= 1)}>
                 <MinusIcon />
               </Button>
-              <Button variant="default" size="icon">
+              <Button variant="default" size="icon" onclick={() => (tally += 1)}>
                 <PlusIcon />
               </Button>
             </Table.Cell>
