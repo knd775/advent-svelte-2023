@@ -24,7 +24,7 @@
           />
         </div>
         <div>
-          <span class="font-semibold"> Advent of Svelte </span>
+          <span class="text-sm font-semibold sm:text-base"> Advent of Svelte </span>
         </div>
       </a>
     </div>
