@@ -1,4 +1,4 @@
-/** @type { import("eslint").Linter.Config } */
+/** @type { import("eslint").Linter.FlatConfig } */
 module.exports = {
   root: true,
   extends: [
@@ -22,6 +22,20 @@ module.exports = {
   overrides: [
     {
       files: ['*.svelte'],
+      parser: 'svelte-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser'
+      }
+    },
+    {
+      files: ['*.svelte.js'],
+      parser: 'svelte-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser'
+      }
+    },
+    {
+      files: ['*.svelte.ts'],
       parser: 'svelte-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser'
