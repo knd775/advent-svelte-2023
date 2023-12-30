@@ -39,7 +39,6 @@ export class Store {
   }
 
   get unloaded() {
-    console.log(this.#unloadedArray);
     return this.#unloadedArray;
   }
 

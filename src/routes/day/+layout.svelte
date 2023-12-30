@@ -7,6 +7,9 @@
 
   let { children } = $props();
 
+  // eslint-disable-next-line svelte/valid-compile
+  $page;
+
   let dayNumber = $derived(Number($page.url.pathname.split('/').pop()));
   let nextDay = $derived(dayNumber + 1);
   let prevDay = $derived(dayNumber - 1);
