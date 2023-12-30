@@ -13,11 +13,12 @@ export const days: Day[] = [
   {
     day: 2,
     title: 'Merry Munch-o-Meter',
-    status: 'incomplete'
+    status: 'complete'
   },
   {
     day: 3,
-    title: 'Jingle Bell Balancer'
+    title: 'Jingle Bell Balancer',
+    status: 'incomplete'
   },
   {
     day: 4,
