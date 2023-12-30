@@ -16,7 +16,7 @@
   let name = $state('');
 </script>
 
-<div class="flex items-start gap-4">
+<div class="items-start space-y-4 lg:flex lg:gap-4 lg:space-y-0">
   <Card.Root class="w-full">
     <Card.Header>
       <Card.Title>Naughty or Nice list</Card.Title>
@@ -75,7 +75,7 @@
         <Card.Title>Options</Card.Title>
         <Card.Description>Advanced options for managing the list</Card.Description>
       </Card.Header>
-      <Card.Content>
+      <Card.Content class="space-x-2">
         <Button class="mt-4" onclick={() => list.set(data.list)}>Reinitialize</Button>
         <Button class="mt-4" onclick={() => list.clear()}>Clear</Button>
       </Card.Content>
