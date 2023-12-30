@@ -25,6 +25,9 @@ devDependencies:
   '@iconify-json/heroicons':
     specifier: ^1.1.19
     version: 1.1.19
+  '@iconify-json/lucide':
+    specifier: ^1.1.150
+    version: 1.1.150
   '@iconify-json/mdi':
     specifier: ^1.1.63
     version: 1.1.63
@@ -438,6 +441,12 @@ packages:
 
   /@iconify-json/heroicons@1.1.19:
     resolution: {integrity: sha512-uW2F9vdGll59W21ocBl+wR4Ve+/1CsmzBqPTuOaR3CbKzqnJKwzGASvC4Op0uTieFVWfBaevnzcRxwNo73J29g==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/lucide@1.1.150:
+    resolution: {integrity: sha512-VnG9xLagAPH4B8+ywkziDOGOv/JCelLLR3aBPC0cyVuWi2iuV6A3Yu8fYsZ+BCAwiCy5pkjMDM/HeZnBtlbngQ==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

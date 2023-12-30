@@ -3,6 +3,7 @@
   import { days } from '$lib/days';
   import CheckIcon from '~icons/heroicons/check-circle-solid';
   import InProgressIcon from '~icons/heroicons/clock-solid';
+  import NotStartedIcon from '~icons/lucide/circle-dashed';
 </script>
 
 <div class="grid grid-cols-2 gap-2 lg:grid-cols-4">
@@ -31,8 +32,9 @@
     {:else}
       <Card.Root class="bg-muted/15 opacity-40">
         <Card.Header>
-          <Card.Title>
+          <Card.Title class="flex gap-1">
             Day {day}
+            <NotStartedIcon class="text-sm opacity-30" />
           </Card.Title>
           {title}
         </Card.Header>
