@@ -17,28 +17,30 @@
   <title>Day {dayNumber} - Advent of Svelte</title>
 </svelte:head>
 
-<div class="flex items-center space-x-2 pb-4">
+<div class="flex items-center justify-between pb-4">
   <h3>Day {dayNumber}: {title}</h3>
 
-  {#if prevDay > 0}
-    <Button variant="outline" size="icon" href="/day/{prevDay}">
-      <LeftIcon />
-    </Button>
-  {:else}
-    <Button variant="outline" size="icon" disabled>
-      <LeftIcon />
-    </Button>
-  {/if}
+  <div class="space-x-2">
+    {#if prevDay > 0}
+      <Button variant="outline" size="icon" href="/day/{prevDay}">
+        <LeftIcon />
+      </Button>
+    {:else}
+      <Button variant="outline" size="icon" disabled>
+        <LeftIcon />
+      </Button>
+    {/if}
 
-  {#if nextDay <= days.filter((d) => d.status && d.status !== 'notstarted').length}
-    <Button variant="outline" size="icon" href="/day/{nextDay}">
-      <RightIcon />
-    </Button>
-  {:else}
-    <Button variant="outline" size="icon" disabled>
-      <RightIcon />
-    </Button>
-  {/if}
+    {#if nextDay <= days.filter((d) => d.status && d.status !== 'notstarted').length}
+      <Button variant="outline" size="icon" href="/day/{nextDay}">
+        <RightIcon />
+      </Button>
+    {:else}
+      <Button variant="outline" size="icon" disabled>
+        <RightIcon />
+      </Button>
+    {/if}
+  </div>
 </div>
 
 {@render children()}

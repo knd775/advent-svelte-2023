@@ -43,7 +43,7 @@
                   {naughty ? 'Naughty' : 'Nice'}
                 </Badge>
               </Table.Cell>
-              <Table.Cell>
+              <Table.Cell class="space-x-2">
                 <Button variant="default" size="icon" onclick={() => list.decrement(id)}>
                   <MinusIcon />
                 </Button>
