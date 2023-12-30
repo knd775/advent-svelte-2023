@@ -8,12 +8,12 @@ export const days: Day[] = [
   {
     day: 1,
     title: 'Naughty or Nice',
-    status: 'incomplete'
+    status: 'complete'
   },
   {
     day: 2,
     title: 'Merry Munch-o-Meter',
-    status: 'notstarted'
+    status: 'incomplete'
   },
   {
     day: 3,

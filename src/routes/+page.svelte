@@ -19,7 +19,7 @@
             <Card.Title class="flex gap-1">
               Day {day}
               {#if status === 'complete'}
-                <CheckIcon class="text-sm" />
+                <CheckIcon class="text-sm text-green-500" />
               {:else if status === 'incomplete'}
                 <InProgressIcon class="text-sm text-yellow-500" />
               {/if}
