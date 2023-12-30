@@ -40,7 +40,10 @@
               {gift.name} ({gift.weight} kg)
             </Button>
           {:else}
-            <Button variant="outline" class="pointer-events-none bg-muted/15 opacity-50">
+            <Button
+              variant="outline"
+              class="pointer-events-none select-none bg-muted/15 opacity-40"
+            >
               {gift.name} ({gift.weight} kg)
             </Button>
           {/if}
