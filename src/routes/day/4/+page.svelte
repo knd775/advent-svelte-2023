@@ -22,7 +22,7 @@
     </Card.Content>
   </Card.Root>
 
-  <div class="min-w-96 space-y-4">
+  <div class="space-y-4 sm:min-w-96">
     <Card.Root>
       <Card.Header>
         <Card.Title>Statistics</Card.Title>
