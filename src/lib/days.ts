@@ -23,11 +23,12 @@ export const days: Day[] = [
   {
     day: 4,
     title: 'Heart of Christmas',
-    status: 'incomplete'
+    status: 'complete'
   },
   {
     day: 5,
-    title: 'Present Progress'
+    title: 'Present Progress',
+    status: 'incomplete'
   },
   {
     day: 6,
