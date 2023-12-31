@@ -6,7 +6,3 @@ export type Task = {
   minutesTaken: number;
   date: string;
 };
-
-export type Tasks = {
-  [key: string]: Task;
-};
