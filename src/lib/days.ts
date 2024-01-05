@@ -32,11 +32,13 @@ export const days: Day[] = [
   },
   {
     day: 6,
-    title: 'Mistletoe Metronome'
+    title: 'Mistletoe Metronome',
+    status: 'complete'
   },
   {
     day: 7,
-    title: 'Morse Mischief'
+    title: 'Morse Mischief',
+    status: 'incomplete'
   },
   {
     day: 8,
