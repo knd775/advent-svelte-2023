@@ -1,5 +1,3 @@
 {
-  "recommendations": [
-    "selemondev.vscode-shadcn-svelte"
-  ]
+  "recommendations": ["selemondev.vscode-shadcn-svelte"]
 }
