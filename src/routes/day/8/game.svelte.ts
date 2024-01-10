@@ -5,12 +5,14 @@ export class CardGame {
   blocked = $derived(this.flippedCards.length >= 2);
   active = $state(false);
   timer = $state(0);
+  complete = $derived(this.numberOfMatches === 24);
+  highScore = $state(0);
   #interval: number | null = null;
 
-  constructor() {
+  constructor(gameComplete: ((time: number) => void) | undefined) {
     $effect(() => {
       this.createDeck();
-      this.shuffle();
+      // this.shuffle();
     });
 
     $effect(() => {
@@ -21,23 +23,21 @@ export class CardGame {
           card1.matched = true;
           card2.matched = true;
         } else {
-          console.log('no match', this.flippedCards);
           this.flippedCards.forEach((card) => {
             setTimeout(() => {
-              console.log('unflipping', card, card.flipped);
               card.unflip();
-              console.log('unflipped', card, card.flipped);
             }, 750);
           });
         }
       }
-      return () => {
-        console.log('checking cards', this.flippedCards, this.flippedCards.length);
-      };
     });
 
     $effect(() => {
-      if (this.numberOfMatches === 24) {
+      if (this.complete) {
+        if (this.timer < this.highScore || this.highScore === 0) {
+          this.highScore = this.timer;
+        }
+        gameComplete?.(this.timer);
         this.active = false;
       }
     });
@@ -49,13 +49,13 @@ export class CardGame {
     });
 
     $effect(() => {
-      if (this.active) {
+      if (this.active && !this.#interval) {
         this.#interval = setInterval(() => {
           this.timer++;
         }, 1000);
-      } else if (this.#interval) {
+      } else if (this.#interval && !this.active) {
         clearInterval(this.#interval);
-        this.timer = 0;
+        this.#interval = null;
       }
     });
   }
@@ -69,23 +69,28 @@ export class CardGame {
   }
 
   shuffle() {
-    let currentIndex = this.cards.length;
+    const shuffleArray = [...this.cards];
+    let currentIndex = shuffleArray.length;
     let randomIndex: number;
 
     while (currentIndex > 0) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
 
-      [this.cards[currentIndex], this.cards[randomIndex]] = [
-        this.cards[randomIndex] ?? new Card(0, this),
-        this.cards[currentIndex] ?? new Card(0, this)
+      [shuffleArray[currentIndex], shuffleArray[randomIndex]] = [
+        shuffleArray[randomIndex] ?? new Card(0, this),
+        shuffleArray[currentIndex] ?? new Card(0, this)
       ];
     }
+
+    this.cards = shuffleArray;
   }
 
   reset() {
+    this.timer = 0;
     this.createDeck();
     this.shuffle();
+    this.active = false;
   }
 
   get numberOfMatches() {
