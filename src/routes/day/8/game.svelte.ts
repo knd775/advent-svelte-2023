@@ -12,7 +12,7 @@ export class CardGame {
   constructor(gameComplete: ((time: number) => void) | undefined) {
     $effect(() => {
       this.createDeck();
-      // this.shuffle();
+      this.shuffle();
     });
 
     $effect(() => {
