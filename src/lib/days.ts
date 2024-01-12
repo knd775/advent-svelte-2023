@@ -48,15 +48,17 @@ export const days: Day[] = [
   {
     day: 9,
     title: "Santa's Final Countdown",
-    status: 'incomplete'
+    status: 'complete'
   },
   {
     day: 10,
-    title: 'Pop-up! Spreading the holiday cheer'
+    title: 'Pop-up! Spreading the holiday cheer',
+    status: 'complete'
   },
   {
     day: 11,
-    title: 'Tinsel Transformers'
+    title: 'Tinsel Transformers',
+    status: 'incomplete'
   },
   {
     day: 12,
