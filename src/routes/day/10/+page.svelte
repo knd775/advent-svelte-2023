@@ -20,7 +20,11 @@
       <AlertDialog.Description></AlertDialog.Description>
     </AlertDialog.Header>
 
-    <img src="/santa.png" alt="Santa Claus" class="mx-auto mt-4 w-full max-w-[300px]" />
+    <enhanced:img
+      src="/static/santa.png"
+      alt="Santa Claus"
+      class="mx-auto mt-4 w-full max-w-[300px]"
+    />
 
     <AlertDialog.Footer>
       <AlertDialog.Cancel>Thanks!</AlertDialog.Cancel>

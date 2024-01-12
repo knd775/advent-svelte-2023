@@ -5,7 +5,7 @@
   $page;
 </script>
 
-<div class="flex h-screen flex-col items-center justify-center text-center">
+<div class="flex h-[90vh] flex-col items-center justify-center text-center">
   <div>
     <h1
       class="mr-5 inline-block border-r border-solid border-black/[0.3] pr-6 align-top text-xl font-medium leading-[49px] dark:border-white/[0.3]"
