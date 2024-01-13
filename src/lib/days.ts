@@ -58,11 +58,12 @@ export const days: Day[] = [
   {
     day: 11,
     title: 'Tinsel Transformers',
-    status: 'incomplete'
+    status: 'complete'
   },
   {
     day: 12,
-    title: 'Greetings & Salutations'
+    title: 'Greetings & Salutations',
+    status: 'incomplete'
   },
   {
     day: 13,
